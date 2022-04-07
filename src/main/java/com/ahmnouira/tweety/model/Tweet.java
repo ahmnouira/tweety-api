@@ -35,4 +35,7 @@ public class Tweet {
 
     @NotNull
     private String content;
+
+    public void setTweetUser(User u) {
+    }
 }
