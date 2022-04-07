@@ -33,8 +33,15 @@ public class TweetService {
         return Flux.fromIterable(tweetRepository.findAll()).publishOn(dbScheduler);
     }
 
-    public Flux<Tweet> getRelevantTweets(String username, String content) {
-        return Flux.fromIterable(tweetRepository.findByTweetUser_UsernameOrContentContains(username, "@" + username));
+    /**
+     * will retrieve tweets intended for a user identified by a particular username
+     * 
+     * @param username
+     * @return
+     */
+    public Flux<Tweet> getRelevantTweets(String username) {
+        return Flux.fromIterable(tweetRepository.findByTweetUser_UsernameOrContentContains(username, "@" + username))
+                .publishOn(dbScheduler);
     }
 
 }

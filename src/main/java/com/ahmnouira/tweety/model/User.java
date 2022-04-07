@@ -14,10 +14,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 public class User {
 
     @Id
@@ -52,6 +52,14 @@ public class User {
 
     public Role getRole() {
         return this.role;
+    }
+
+    public String getUserId() {
+        return this.userId;
+    }
+
+    public Set<String> getFollowing() {
+        return this.following;
     }
 
 }
