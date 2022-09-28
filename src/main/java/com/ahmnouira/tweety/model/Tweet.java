@@ -35,18 +35,4 @@ public class Tweet {
 
     @NotNull
     private String content;
-
-    public Tweet() {
-
-    }
-
-    public Tweet(Integer id, Timestamp postTime, User user, String content) {
-        this.id = id;
-        this.postTime = postTime;
-        this.tweetUser = user;
-        this.content = content;
-    }
-
-    public void setTweetUser(User u) {
-    }
 }
