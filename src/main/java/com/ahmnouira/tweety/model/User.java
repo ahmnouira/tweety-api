@@ -42,39 +42,4 @@ public class User {
     @ElementCollection
     private Set<String> following;
 
-    public User() {
-
-    }
-
-    public User(String userId, String password, String username, Role role, String bio, String image,
-            Set<String> following) {
-        this.userId = userId;
-        this.password = password;
-        this.username = username;
-        this.role = role;
-        this.bio = bio;
-        this.profileImage = image;
-        this.following = following;
-    }
-
-    public String getPassword() {
-        return this.password;
-    }
-
-    public String getUsername() {
-        return this.username;
-    }
-
-    public Role getRole() {
-        return this.role;
-    }
-
-    public String getUserId() {
-        return this.userId;
-    }
-
-    public Set<String> getFollowing() {
-        return this.following;
-    }
-
 }
