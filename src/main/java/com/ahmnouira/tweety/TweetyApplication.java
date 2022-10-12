@@ -60,5 +60,4 @@ public class TweetyApplication {
 		source.registerCorsConfiguration("/**", config);
 		return source;
 	}
-
 }
